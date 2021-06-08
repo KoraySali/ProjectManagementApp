@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>Users</title>
+	<meta name="description" content="APP Web Task 5">
+	<meta name="author" content="SitePoint">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+
+</head>
+
+<body class="w3-xlarge w3-white w3-container">
+
+	<style>
+		.w3-lobster {
+			font-family: "Lobster", serif;
+		}
+	</style>
+
+	<style>
+
+		html, body, h1, h2, h3, h4, h5, h6 {
+			font-family: "Arial", cursive, sans-serif;
+		}
+
+		.w3-impact {
+			font-family: "impact", cursive, monospace;
+		}
+
+		.w3-tahoma {
+			font-family: "Tahoma", geneva, sans-serif;
+		}
+	</style>
+
+	<div class="w3-bar w3-light-grey w3-border w3-top">
+		<a href="#" class="w3-bar-item w3-button w3-green"><i class="fa fa-home"></i></a>
+		<a href="#" class="w3-bar-item w3-button"><i class="fa fa-search"></i></a>
+		<a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
+		<a href="#" class="w3-bar-item w3-button"><i class="fa fa-sign-in"></i></a>
+	</div>
+
+	<header>blank</header>
+	<header class="w3-light-grey w3-container w3-center w3-border w3-border-black">
+		<p>   </p>
+		<h2 class="w3-wide w3-opacity w3-xxlarge"><b>APP Single Page Coursework</b></h2>
+            <div id="response"></div>
+	</header>
+
+
+<!--This section of code is for the dropdown container that has the table stored in it.-->
+
+	<div>
+		<div class="w3-container">
+
+			<div class="w3-dropdown-hover">
+				<button class="w3-button w3-border w3-border-black w3-opacity-max w3-white w3-wide">
+					<b>All Users:</b></button>
+
+				<div class="w3-dropdown-content">
+
+					<section id="sectUsers" class="w3-container">
+
+						<div id="divPageNumber" class="w3-large w3-center w3-tahoma">
+            				Page <span id="pageNumber">1</span>
+							of <span id="totalPages">2:</span>
+						</div>
+
+						<div id = "tablebuttons" class="w3-center w3-small w3-tahoma">
+							<button id="btnPrevious" class="w3-btn w3-blue-grey">Previous</button>
+							<button id="btnNext" class="w3-btn w3-blue-grey">Next</button>
+						</div>
+
+						<div class="w3-white">
+							<h2 class="w3-center w3-white w3-impact"><b>Users</b></h2>
+
+<!--Here is the creation of the table.-->
+
+							<table id="tblUsers" class="w3-table w3-bordered w3-light-grey w3-small w3-card">
+								<tbody>
+									<tr id="tblUserHeader" class="w3-white">
+										<th>User ID</th>
+										<th>Email</th>
+										<th>First Name</th>
+										<th>Last Name</th>
+										<th>Avatar</th>
+									</tr>
+									<tr id="user1" class="w3-hover-black w3-hover-opacity">
+										<td>1</td>
+										<td>george.bluth@reqres.in</td>
+										<td>George</td>
+										<td>Bluth</td>
+										<td>
+											<img src="https://s3.amazonaws.com/uifaces/faces/twitter/calebogden/128.jpg"
+												 class="w3-circle" alt="avatar"></td>
+									</tr>
+									<tr id="user2" class="w3-hover-black w3-hover-opacity">
+										<td>2</td>
+										<td>janet.weaver@reqres.in</td>
+										<td>Janet</td>
+										<td>Weaver</td>
+										<td>
+											<img src="https://s3.amazonaws.com/uifaces/faces/twitter/josephstein/128.jpg"
+												 class="w3-circle" alt="avatar"></td>
+									</tr>
+									<tr id="user3" class="w3-hover-black w3-hover-opacity">
+										<td>3</td>
+										<td>emma.wong@reqres.in</td>
+										<td>Emma</td>
+										<td>Wong</td>
+										<td>
+											<img src="https://s3.amazonaws.com/uifaces/faces/twitter/olegpogodaev/128.jpg"
+												 class="w3-circle" alt="avatar"></td>
+									</tr>
+									<tr id="user4" class="w3-hover-black w3-hover-opacity">
+										<td>4</td>
+										<td>eve.holt@reqres.in</td>
+										<td>Eve</td>
+										<td>Holt</td>
+										<td>
+											<img src="https://s3.amazonaws.com/uifaces/faces/twitter/marcoramires/128.jpg"
+												 class="w3-circle" alt="avatar"></td>
+									</tr>
+									<tr id="user5" class="w3-hover-black w3-hover-opacity">
+										<td>5</td>
+										<td>charles.morris@reqres.in</td>
+										<td>Charles</td>
+										<td>Morris</td>
+										<td>
+											<img src="https://s3.amazonaws.com/uifaces/faces/twitter/stephenmoon/128.jpg"
+												 class="w3-circle" alt="avatar"></td>
+									</tr>
+									<tr id="user6" class="w3-hover-black w3-hover-opacity">
+										<td>6</td>
+										<td>tracey.ramos@reqres.in</td>
+										<td>Tracey</td>
+										<td>Ramos</td>
+										<td>
+											<img src="https://s3.amazonaws.com/uifaces/faces/twitter/bigmancho/128.jpg"
+												 class="w3-circle" alt="avatar"></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</section>
+				</div>
+			</div>
+
+<!--This section allows for the input of selecting a user.-->
+
+			<section id="sectUser">
+				<div class="w3-white w3-border w3-padding-16 w3-border-black">
+					<h2 class="w3-center w3-wide w3-tahoma"><b>User</b></h2>
+					<div class="w3-container w3-light-grey">
+						<div class="w3-container w3-teal">
+							<h2>User Form</h2>
+						</div>
+
+						<img id="userAvatar" />
+
+						<form id="frmUser" class="w3-container">
+							<label class="w3-text-teal"><b>First Name:</b></label>
+							<input id = "userFirstName" class="w3-input w3-border w3-light-grey" type="text">
+
+							<label class="w3-text-teal"><b>Last Name:</b></label>
+							<input id = "userLastName" class="w3-input w3-border w3-light-grey" type="text">
+
+							<label class="w3-text-teal"><b>User ID:</b></label>
+							<input id = "userID" class="w3-input w3-border w3-light-grey" type="text">
+
+							<label class="w3-text-teal"><b>Email Address:</b></label>
+							<input id = "userEmail" sclass="w3-input w3-border w3-light-grey" type="text">
+
+							<button id="btnSaveUser" class="w3-btn w3-blue-grey">Save Changes</button>
+							<button id="btnDeleteUser" class="w3-btn w3-blue-grey">Delete User</button>
+						</form>
+					</div>
+				</div>
+			</section>
+
+<!--This section here allows for the input of a new user.-->
+
+			<section id="sectNewUser">
+
+				<div class="w3-white w3-border w3-padding-16 w3-border-black">
+					<h2 class="w3-center w3-wide w3-tahoma"><b>New User</b></h2>
+
+					<div class="w3-container w3-light-grey">
+
+						<div class="w3-card-4">
+
+							<div class="w3-container w3-green">
+								<h2>New User</h2>
+							</div>
+
+							<form id="frmNewUSer" class="w3-container">
+
+								<label class="w3-text-green"><b>Email:</b></label>
+								<input id ="nUserEmail" class="w3-input w3-border" type="text">
+
+								<label class="w3-text-green"><b>First Name:</b></label>
+								<input id ="nUserFirstName" class="w3-input w3-border" type="text">
+
+								<label class="w3-text-green"><b>Last Name:</b></label>
+								<input id ="nUserLastName" class="w3-input w3-border" type="text">
+
+								<label class="w3-text-green"><b>Avatar:</b></label>
+								<input id ="nUserAvatar" class="w3-input w3-border" type="text">
+
+								<button id="btnNewUser" class="w3-btn w3-green" type="button" onclick="createUser()">Register</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+	<script src = "js/javascript.js"></script>
+   </body>
+</html>
